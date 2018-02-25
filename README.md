@@ -1,5 +1,10 @@
-# slapp-firebase-example
-An example [Slapp][slap] Slack App using [Firebase][firebase] as the persistence layer. A primary goal of this repo is to serve as an example of you you might integrate a custom persistence layer w/ [Slapp][slap].
+# mrspiral-spudbot
+
+A reimplementation of [Radiospiral][http://radiospiral.com] Slack bot using this library, and 
+self-hosted at Heroku rather than at BeepBoopHQ (thanks for all the support, folks!)
+
+This [Slapp][slap]-based app uses [Firebase][firebase] as the persistence layer for all the stuff
+that BeepBoop used to host for us.
 
 Expects the following environment variables:
 
@@ -17,7 +22,7 @@ To create your `FIREBASE_SERVICE_ACCOUNT_BASE64` value you'll want to head to yo
 base64 /path/to/service-account.json
 ```
 
-For development you can set your environment variables in an `env.sh` file (which is `.gitignored` for you), and then just source it.
+For development you can set your environment variables in an `env.sh` file (which is `.gitignored` for you), and then just source it. `yarn run start` will run it locally and help you avoid embarrassing 'I pushed a syntax error to heroku' problems.
 
 ```bash
 export PORT="8080"
