@@ -1,5 +1,7 @@
 'use strict'
 
+require('dotenv').config()
+console.log(process.env.type)
 const App = require('./lib/')
 const express = require('express')
 const PORT = process.env.PORT || 3000
